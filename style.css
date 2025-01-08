@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(237, 237, 237);
+    font-family: "Inter", serif;
+}
+/* Parent container styling */
+.container {
+    min-width: 700px;
+    min-height: 350px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgba(241, 236, 222, 0.8);
+
+}
+/* input container styling */
+.input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container[hidden]{
+    display: none;
+}
+
+.form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    font-family: "Inter", serif;
+}
+
+label {
+    padding: 10px;
+}
+
+button {
+    width: 40%;
+    margin-top: 25px;
+    align-self: center;
+    border-radius: 15px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(64, 112, 102);
+    color: white;
+    font-family: "Inter", serif;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+/* Countdown container styling */
+.countdown-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-container[hidden]{
+    display: none;
+}
+/* From styling for both input and countdown containers */
+li {
+    font-size: 30px;
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+li span {
+    display: block;
+    font-size: 70px;
+    text-align: center;
+}
+/* Finished countdown container styling */
+.finished-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.finished-container[hidden]{
+    display: none;
+}
+
+.finished-title {
+    animation: finished 1.8s infinite;
+}
+
+@keyframes finished {
+    50%{
+        transform: scale(1.2);
+    }
+}
+
+/* Media queries */
+
+@media screen and (max-width: 600px) {
+    .container {
+        min-width: unset;
+        width: 95vw;
+    }
+
+    .countdown-container {
+        min-width: unset;
+        width: 95vw;
+    }
+
+    li {
+        font-size: 15px;
+    }
+
+    li span {
+        font-size: 50px;
+    }
+
+    ul {
+        padding: 0;
+    }
+}
