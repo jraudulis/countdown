@@ -11,31 +11,31 @@
     <!-- Parent container -->
     <div class="container" id="container">
         <!-- Input container -->
-        <div class="input-container" id="input-container" hidden>
-            <h1>Countdown title</h1>
+        <div class="input-container" id="input-container">
+            <h1>Your Countdown</h1>
             <form class="form" id="countdown-form">
                 <label for="title">Title</label>
                 <input type="text" id="title" placeholder="Countdown for?">
                 <label for="date-selector">Select date</label>
                 <input type="date" id="date-selector">
-                <button type="submit">Submit</button>
+                <button id="submit-button" type="submit">Submit</button>
             </form>
         </div>
         <!-- Countdown container -->
          <div class="countdown-container" id="countdown-container" hidden>
-            <h1 id="countdown-title">Countdown</h1>
+            <h1 id="countdown-title"></h1>
             <ul>
-                <li><span>1</span>Days</li>
-                <li><span>12</span>Hours</li>
-                <li><span>41</span>Minutes</li>
-                <li><span>15</span>Seconds</li>
+                <li><span></span>Days</li>
+                <li><span></span>Hours</li>
+                <li><span></span>Minutes</li>
+                <li><span></span>Seconds</li>
             </ul>
             <button id="countdown-button">Reset</button>
          </div> 
           <!-- Finished countdown container -->
-           <div class="finished-container" id="finished-container">
+           <div class="finished-container" id="finished-container" hidden>
             <h1 class="finished-title">Countdown finished</h1>
-            <h1 id="count-info">Finished on: dd/mm/yy</h1>
+            <h1 id="count-info"></h1>
             <button id="complete-button">Complete</button>
            </div>
     </div>
